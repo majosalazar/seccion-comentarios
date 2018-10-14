@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- firestore -->
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+
   <link rel="stylesheet" href="src/css/style.css">
   <title>Seccion Comentarios</title>
 </head>
@@ -14,7 +18,7 @@
       <textarea placeholder="Escribe un mensaje" id="mensaje" cols="30" rows="10"></textarea>
     </div>
     <div>
-      <button id="btnEnviar">Enviar</button>
+      <button id="btnEnviar" onclick="enviar()">Enviar</button>
     </div>
   </div>
   <div>
@@ -23,22 +27,7 @@
 
 
   
-<!-- firebase -->
-<script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyC3L3m1eSW4wkZg3VW-6M-Nw5NrZlmrHo8",
-    authDomain: "comentarios-8896b.firebaseapp.com",
-    databaseURL: "https://comentarios-8896b.firebaseio.com",
-    projectId: "comentarios-8896b",
-    storageBucket: "comentarios-8896b.appspot.com",
-    messagingSenderId: "811548784947"
-  };
-  firebase.initializeApp(config);
-  // Get a reference to the database service
-  var database = firebase.database();
-</script>
+
 <!-- enlace js -->
 <script src="src/js/app.js"></script>
 </body>
